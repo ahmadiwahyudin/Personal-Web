@@ -1,90 +1,144 @@
-const blogArticles = [
-  {
-    id: "literasi-multimodal-kritis",
-    title: "Tinjauan Kritis Praktik Literasi Multimodal: Relasi Kuasa, Bias Wacana, dan Distorsi Informasi",
-    category: "Critical Literacy & Multimodal Discourse",
-    date: "October 2026",
-    readTime: "6 min read",
-    excerpt: "Dekomposisi semiotika visual, sesat pikir retorika, dan hegemoni kuasa pada teks sinematik Game of Thrones dan orasi politik digital berbasis model Kristen H. Perry (2012)...",
-    content: `
-      <p class="text-base leading-relaxed text-slate-700">
-        Kajian literasi kontemporer telah bergeser dari sekadar kecakapan fungsional membaca lambang grafis menuju arena pertarungan politik dan kebudayaan[cite: 21]. Teks bukan lagi wadah transmisi makna yang netral, melainkan artefak material yang tertanam kuat dalam relasi kuasa, hegemoni kultural, dan konstruksi ideologis para produsennya[cite: 21].
-      </p>
-
-      <h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">1. Kerangka Triadik Model Kristen H. Perry (2012)</h3>
-      <p class="text-base leading-relaxed text-slate-700">
-        Analisis ini menerapkan model sosiokultural Perry (2012) yang membagi kontinum literasi ke dalam tiga dimensi: <em>Literacy as Skills</em> (penguasaan teknis linguistik), <em>Literacy as Social Practice</em> (peristiwa literasi dalam komunitas), dan <em>Literacy as Socio-cultural/Critical Practice</em> (pembongkaran struktur ideologi dan dominasi kekuasaan)[cite: 21]. Kerangka ini diperkaya oleh pedagogi kritis Paulo Freire mengenai dialektika pembebasan serta <em>Four Resources Model</em> dari Allan Luke dan Peter Freebody[cite: 21].
-      </p>
-
-      <blockquote class="p-4 my-4 border-l-4 border-sky-500 bg-sky-50 rounded-r-xl italic text-slate-700 text-sm">
-        "Manipulasi wacana modern kerap tidak disematkan pada kata-kata yang diucapkan, melainkan disusupkan secara subliminal melalui komposisi sudut kamera, framing tipografi, dan penataan modalitas visual non-verbal."[cite: 21]
-      </blockquote>
-
-      <h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">2. Paradoks Dekolonisasi: Dany's Speech at Meereen</h3>
-      <p class="text-base leading-relaxed text-slate-700">
-        Pada teks fiksi sinematik <em>Game of Thrones</em>, orasi Daenerys Targaryen memperlihatkan bagaimana bahasa vernakular <em>Low Valyrian</em> dan tindakan simbolik pelontaran pecahan kerah budak mendekonstruksi tirani lama para <em>Great Masters</em>[cite: 21]. Namun secara kritis, teks tersebut memuat sesat pikir <em>False Dilemma</em> dan <em>False Generosity</em> (Freire, 1970); ia membebaskan budak bukan dengan menumbuhkan agensi otonom kaum tertindas, melainkan memposisikan dirinya sebagai juru selamat eksternal yang menuntut kepatuhan hegemoni mutlak sang ratu penakluk[cite: 21].
-      </p>
-
-      <h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">3. Retorika Populisme dan Anti-Intelektualisme Digital</h3>
-      <p class="text-base leading-relaxed text-slate-700">
-        Pada teks wacana politik digital YouTube Shorts pidato Prabowo Subianto, terjadi pembelahan tajam antara <em>us versus them</em>[cite: 21]. Penggunaan pronomina intim 'aku', register kolokial, serta pelabelan sinis terhadap pakar komunikasi dan pers mengoperasikan bias <em>Poisoning the Well</em> dan <em>Argumentum ad Populum</em>[cite: 21]. Spontanitas emosional dijadikan pembenaran semu untuk mendelegitimasi naskah kebijakan tertulis dan kepakaran teknokratis[cite: 21].
-      </p>
-
-      <h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">4. Rekonstruksi Pedagogis</h3>
-      <p class="text-base leading-relaxed text-slate-700">
-        Sebagai implikasi praktis, kurikulum pengajaran bahasa di perguruan tinggi perlu bertransformasi melampaui keterampilan teknis semata[cite: 21]. Pembelajar wajib dibekali instrumen <em>Multimodal Critical Discourse Analysis</em> agar memiliki daya imunitas kognitif dalam menyingkap manipulasi semiotik, ilusi kedermawanan palsu, dan distorsi informasi di ruang publik digital[cite: 21].
-      </p>
-    `
-    },
-    {
-    id: "psikolinguistik-komputasional-prabowo",
-    title: "Analisis Psikolinguistik Komputasional Keterbacaan dan Beban Kognitif Pidato Prabowo Subianto",
-    category: "Computational Psycholinguistics",
-    date: "October 2026",
-    readTime: "5 min read",
-    excerpt: "Evaluasi beban pemrosesan kognitif dan profil keterbacaan pada korpus tuturan kenegaraan menggunakan pipeline Stanford Stanza NLP dan Cognitive Load Theory...",
-    content: `
-      <p class="text-base leading-relaxed text-slate-700">
-        Integrasi materi ajar autentik seperti pidato kenegaraan dalam pembelajaran bahasa tingkat lanjut kerap menghadapi kendala kritis: ketidaksesuaian antara kompleksitas intrinsik wacana dan kapasitas pemrosesan kognitif pembelajar.
-      </p>
-
-      <h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">1. Paradoks Seleksi Materi Autentik dan Beban Memori</h3>
-      <p class="text-base leading-relaxed text-slate-700">
-        Berdasarkan <em>Cognitive Load Theory</em> (Sweller, 1988) dan <em>Dependency Locality Theory</em> (Gibson, 2000), struktur kalimat dengan dependensi sintaksis jarak jauh memicu lonjakan integrasi memori kerja (<em>working memory</em>). Ketika pendidik hanya mengandalkan intuisi subjektif atau formula keterbacaan konvensional yang sebatas menghitung panjang fisik kata, dimensi laten seperti kepadatan leksikal (<em>lexical density</em>) dan variasi kosakata sering terabaikan, berujung pada terjadinya <em>cognitive overload</em> pada pembelajar.
-      </p>
-
-      <blockquote class="p-4 my-4 border-l-4 border-sky-500 bg-sky-50 rounded-r-xl italic text-slate-700 text-sm">
-        "Formula keterbacaan tradisional gagal menangkap dimensi psikolinguistik laten seperti syntactic parsing load dan kepadatan konseptual yang dialami memori kerja secara nyata."
-      </blockquote>
-
-      <h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">2. Eksplorasi Korpus Berbasis Stanford Stanza NLP</h3>
-      <p class="text-base leading-relaxed text-slate-700">
-        Riset ini memosisikan korpus delapan naskah pidato resmi Presiden Prabowo Subianto (kurun waktu 2025–2026)—yang mencakup register formal-fiskal, orasi terbuka, hingga diplomasi internasional dwibahasa—sebagai laboratorium data psikolinguistik. Melalui pipeline <em>Stanford Stanza</em> berbasis Python di Google Colab, diekstraksi empat variabel matematis utama: <em>Mean Length of Sentence</em> (MLS), <em>Type-Token Ratio</em> (TTR/Root TTR), <em>Lexical Density</em> (LD), serta kalibrasi indeks keterbacaan <em>Flesch Reading Ease</em> untuk tipologi morfologi bahasa Indonesia aglutinatif.
-      </p>
-
-      <h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">3. Jembatan Kalibrasi Pedagogis</h3>
-      <p class="text-base leading-relaxed text-slate-700">
-        Keluaran komputasi ini tidak berhenti pada statistik numerik, melainkan dikonversi menjadi rekomendasi pedagogis terukur. Data empiris tersebut menjadi acuan perancah instruksional (<em>instructional scaffolding</em>), teknik <em>chunking</em> informasi, serta penentuan jenjang kemahiran BIPA (B1 hingga C2) dan materi <em>English for Specific Purposes</em> (ESP) agar materi wacana kepemimpinan publik dapat disajikan selaras dengan kapasitas kognitif siswa.
-      </p>
-    `
-  },
-  {
-    id: "n-gram-politik",
-    title: "Menerapkan Model N-Gram pada Korpus Pidato Politik Indonesia",
-    category: "Computational Linguistics",
-    date: "September 2026",
-    readTime: "5 min read",
-    excerpt: "Tinjauan praktis pengolahan korpus pidato kepresidenan menggunakan Python, NLTK, serta kalkulasi bobot sentimen leksikal...",
-    content: `
-      <p class="text-base leading-relaxed text-slate-700">
-        Pendekatan komputasional dalam studi linguistik politik memungkinkan kita mengukur frekuensi kolokasi dan ritme retorika yang sebelumnya hanya dapat ditafsirkan secara kualitatif.
-      </p>
-      
-      <h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">Ekstraksi Fitur N-Gram</h3>
-      <p class="text-base leading-relaxed text-slate-700">
-        Dengan mengekstraksi unigram, bigram, dan trigram dari naskah pidato, pola pengulangan gagasan tertentu—seperti nasionalisme, ketahanan ekonomi, atau persatuan—dapat dipetakan probabilitas kemunculannya secara matematis dan dapat digunakan untuk analisis sentimen.
-      </p>
-    `
-  }
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Essays & Academic Perspectives | Wahyudin Ahmadi</title>
   
-];
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0ea5e9',
+            dark: '#0f172a',
+            secondary: '#64748b',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+  <!-- Navigasi -->
+  <nav class="sticky top-0 z-40 backdrop-blur-md bg-white/85 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="./index.html" class="font-bold text-sm text-dark flex items-center gap-2 hover:text-primary transition">
+        &larr; Back to Portfolio
+      </a>
+      <span class="text-xs font-mono text-secondary">Ahmadi.lab</span>
+    </div>
+  </nav>
+
+  <!-- Konten Utama: Daftar Tulisan -->
+  <main class="max-w-4xl mx-auto px-6 py-16">
+    <header class="mb-12">
+      <span class="text-xs font-mono uppercase tracking-widest text-primary font-bold">Essays & Perspectives</span>
+      <h1 class="text-3xl font-black text-dark mt-1">Linguistic Thoughts & Fieldwork Notes</h1>
+      <p class="text-secondary text-sm mt-2">Refleksi akademis, catatan metodologi, dan diskursus serta komputasi.</p>
+    </header>
+
+    <!-- Container Daftar Artikel (Otomatis dirender JS) -->
+    <div id="articles-container" class="space-y-6"></div>
+  </main>
+
+  <!-- MODAL / JENDELA BACA ARTIKEL LENGKAP -->
+  <div id="reading-modal" class="fixed inset-0 z-50 hidden bg-slate-950/70 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white w-full max-w-3xl max-h-[90vh] rounded-3xl shadow-2xl overflow-hidden flex flex-col animate-in fade-in zoom-in duration-200">
+      
+      <!-- Modal Header -->
+      <div class="px-8 py-5 border-b border-slate-100 flex items-center justify-between bg-slate-50">
+        <span id="modal-meta" class="text-xs font-mono text-primary font-semibold"></span>
+        <button id="close-modal" class="w-8 h-8 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-700 flex items-center justify-center font-bold text-sm transition">
+          ✕
+        </button>
+      </div>
+
+      <!-- Modal Body (Isi Lengkap Artikel) -->
+      <div class="p-8 overflow-y-auto space-y-4">
+        <h2 id="modal-title" class="text-2xl sm:text-3xl font-black text-dark leading-tight mb-4"></h2>
+        <div id="modal-content" class="space-y-4 text-slate-700"></div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="px-8 py-4 border-t border-slate-100 bg-slate-50 text-right">
+        <button id="close-modal-bottom" class="px-5 py-2 rounded-xl bg-slate-200 hover:bg-slate-300 text-dark text-xs font-bold transition">
+          Close Article
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="py-10 text-center text-xs text-secondary border-t border-slate-200 mt-16 bg-white">
+    &copy; 2026 Wahyudin Ahmadi. All rights reserved.
+  </footer>
+
+  <!-- Script Data & Reader Logic -->
+  <script src="./blog-data.js"></script>
+  <script>
+    const container = document.getElementById('articles-container');
+    const modal = document.getElementById('reading-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalMeta = document.getElementById('modal-meta');
+    const modalContent = document.getElementById('modal-content');
+    const closeBtn = document.getElementById('close-modal');
+    const closeBottomBtn = document.getElementById('close-modal-bottom');
+
+    // 1. Render Kartu Artikel di Daftar
+    if (typeof blogArticles !== 'undefined') {
+      container.innerHTML = blogArticles.map(article => `
+        <article class="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-primary transition duration-200">
+          <div class="flex items-center gap-3 text-xs font-mono text-secondary mb-2">
+            <span class="px-2 py-0.5 rounded bg-sky-50 text-primary font-bold">${article.category}</span>
+            <span>${article.date}</span>
+            <span>• ${article.readTime}</span>
+          </div>
+          <h2 class="text-xl font-bold text-dark mb-2">${article.title}</h2>
+          <p class="text-sm text-secondary leading-relaxed mb-4">${article.excerpt}</p>
+          <button 
+            onclick="openArticle('${article.id}')" 
+            class="text-xs font-semibold text-primary hover:text-sky-700 transition flex items-center gap-1 font-mono"
+          >
+            Read Full Article &rarr;
+          </button>
+        </article>
+      `).join('');
+    }
+
+    // 2. Fungsi Membuka Modal Baca
+    window.openArticle = function(id) {
+      const article = blogArticles.find(a => a.id === id);
+      if (article) {
+        modalTitle.innerText = article.title;
+        modalMeta.innerText = `${article.category} • ${article.date} • ${article.readTime}`;
+        modalContent.innerHTML = article.content;
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Kunci scroll latar belakang
+      }
+    };
+
+    // 3. Fungsi Menutup Modal
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto'; // Kembalikan scroll latar
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    closeBottomBtn.addEventListener('click', closeModal);
+
+    // Tutup jika klik area luar modal atau tekan Esc
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>
