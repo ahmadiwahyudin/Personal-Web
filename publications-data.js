@@ -38,7 +38,7 @@ const publicationsData = [
   },
   {
     title: "English for Intermediate Learners Developing Skills",
-    venue: "Alfa Press Pustaka, Vol. 1, 164 pp.",
+    venue: "Alfa Press Pustaka, Vol. 1, 265 pp.",
     year: "2026",
     tag: "Monograph / Book",
     citations: null,
