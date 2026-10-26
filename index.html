@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wahyudin Ahmadi | Academic & Applied Linguistics Researcher</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0ea5e9',
+            dark: '#0f172a',
+            secondary: '#64748b',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+    .navbar-fixed {
+      position: fixed;
+      z-index: 9999;
+      background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.06);
+    }
+    
+    .hamburger-line {
+      width: 30px;
+      height: 2px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      display: block;
+      background-color: #0f172a;
+      transition: all 0.3s ease-in-out;
+    }
+    .hamburger-active > span:nth-child(1) {
+      transform: rotate(45deg);
+      transform-origin: top left;
+    }
+    .hamburger-active > span:nth-child(2) {
+      transform: scale(0);
+    }
+    .hamburger-active > span:nth-child(3) {
+      transform: rotate(-45deg);
+      transform-origin: bottom left;
+    }
+
+    /* Animasi Garis Bawah Navigasi */
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #0ea5e9;
+      transition: width 0.3s ease-in-out;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-sky-500 selection:text-white">
+
+  <!-- Header / Navbar Section -->
+  <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-50 transition-all duration-300">
+    <div class="container mx-auto max-w-6xl px-6">
+      <div class="flex items-center justify-between relative h-20">
+        <div>
+          <a href="#home" class="font-extrabold text-lg text-primary block py-6 tracking-tight">
+            Ahmadi<span class="text-dark">.lab</span>
+          </a>
+        </div>
+        <div class="flex items-center px-4">
+          <!-- Hamburger Button (Mobile) -->
+          <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden focus:outline-hidden">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+
+          <!-- Navigation Menu -->
+          <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-xl rounded-2xl max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+            <ul class="block lg:flex lg:items-center">
+              <li>
+                <a href="#home" class="nav-link text-sm text-dark py-2 mx-4 flex font-medium hover:text-primary transition duration-200">Home</a>
+              </li>
+              <li>
+                <a href="#about" class="nav-link text-sm text-dark py-2 mx-4 flex font-medium hover:text-primary transition duration-200">About</a>
+              </li>
+              <li>
+                <a href="#institutions" class="nav-link text-sm text-dark py-2 mx-4 flex font-medium hover:text-primary transition duration-200">Institutions</a>
+              </li>
+              <li>
+                <a href="#publications" class="nav-link text-sm text-dark py-2 mx-4 flex font-medium hover:text-primary transition duration-200">Publications</a>
+              </li>
+              <li>
+                <a href="#projects" class="nav-link text-sm text-dark py-2 mx-4 flex font-medium hover:text-primary transition duration-200">HopeKit</a>
+              </li>
+              <li>
+                <a href="./myblog.html" class="nav-link text-sm text-dark py-2 mx-4 flex font-medium hover:text-primary transition duration-200">Essays</a>
+              </li>
+              <li class="mt-2 lg:mt-0">
+                <a href="#contact" class="text-sm text-white bg-primary lg:px-5 lg:py-2 py-2 mx-4 lg:mx-2 rounded-xl flex items-center justify-center font-semibold hover:bg-sky-600 transition duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="pt-36 pb-20">
+    <div class="container mx-auto max-w-6xl px-6">
+      <div class="flex flex-wrap items-center">
+        <!-- Text Left -->
+        <div class="w-full self-center px-4 lg:w-1/2">
+          <h1 class="text-base font-semibold text-primary md:text-xl">
+            Greetings, I am
+            <span class="block font-black text-dark text-4xl mt-1 lg:text-5xl tracking-tight">Wahyudin Ahmadi</span>
+          </h1>
+          <h2 class="font-medium text-secondary text-lg mb-4 lg:text-xl mt-1">
+            Academic & Applied Linguistics Researcher
+          </h2>
+          <p class="font-medium text-secondary leading-relaxed mb-8 max-w-lg text-sm md:text-base">
+            Lecturer at <strong class="text-dark">Universitas Panca Sakti Bekasi</strong> and doctoral researcher in Applied Linguistics at <strong class="text-dark">Universitas Negeri Jakarta</strong>. Alumnus of <strong class="text-dark">Universitas Padjadjaran</strong>. Specializing in computational semantics, computational linguistics, and corpus modeling.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#publications" class="text-sm font-semibold text-white bg-primary py-3 px-7 rounded-full hover:shadow-lg hover:shadow-sky-500/20 hover:-translate-y-0.5 transition duration-300">Selected Publications</a>
+            <a href="#contact" class="text-sm font-semibold text-dark bg-slate-200 py-3 px-7 rounded-full hover:bg-slate-300 hover:-translate-y-0.5 transition duration-300">Get in Touch</a>
+          </div>
+        </div>
+
+        <!-- Image Right with WPU Blob Style -->
+        <div class="w-full self-end px-4 lg:w-1/2 mt-12 lg:mt-0">
+          <div class="relative mx-auto max-w-[480px] flex justify-center items-end group">
+            <img 
+              src="./profile-avatar.jpg" 
+              alt="Wahyudin Ahmadi" 
+              class="relative z-10 w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[460px] h-auto object-contain drop-shadow-2xl transition duration-500 group-hover:scale-[1.02]" 
+            />
+            
+            <span class="absolute bottom-10 -z-0 scale-125 lg:scale-150 text-sky-200 pointer-events-none animate-pulse transition duration-700">
+              <svg width="380" height="380" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M47.7,-64.5C61.4,-57.3,71.8,-42.8,77.2,-26.8C82.7,-10.7,83.1,6.8,77.7,22.8C72.2,38.8,60.8,53.2,46.5,63.1C32.1,73,14.8,78.3,-1.9,80.9C-18.6,83.5,-35.1,83.3,-48.7,74.5C-62.2,65.6,-72.7,48.1,-78.3,29.9C-83.9,11.8,-84.6,-6.9,-78.7,-23.4C-72.9,-39.9,-60.5,-54.2,-45.7,-61.2C-30.8,-68.2,-13.4,-67.9,2.8,-71.8C19.1,-75.6,34,-71.7,47.7,-64.5Z" transform="translate(100 100)" />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="pt-24 pb-20 bg-white border-y border-slate-200">
+    <div class="container mx-auto max-w-6xl px-6">
+      <div class="flex flex-wrap">
+        <!-- Kolom Kiri: Tentang Saya -->
+        <div class="w-full px-4 mb-10 lg:w-1/2">
+          <h4 class="font-bold uppercase text-primary text-sm mb-2 font-mono">About Me</h4>
+          <h2 class="font-black text-dark text-2xl mb-4 lg:text-3xl max-w-md">Bridging Empirical Linguistics with Computational Tools</h2>
+          <p class="font-medium text-sm text-secondary leading-relaxed mb-4">
+            Having completed undergraduate and master's degrees in linguistics at Universitas Padjadjaran (UNPAD) Bandung, my scholarly trajectory integrates computational rhetoric, sentiment dynamics, and critical discourse models.
+          </p>
+          <p class="font-medium text-sm text-secondary leading-relaxed">
+            Currently advancing doctoral research at Universitas Negeri Jakarta (UNJ), my research concentrates on quantitative lexical modeling, computational linguistics, computational semantics, socio-linguistic analysis, and automated natural language analysis.
+          </p>
+        </div>
+
+        <!-- Kolom Kanan: Academic Footprint / Social Links -->
+        <div class="w-full px-4 lg:w-1/2">
+          <h3 class="font-bold text-dark text-xl mb-3 lg:text-2xl lg:pt-8">Connect & Citations</h3>
+          <p class="font-medium text-sm text-secondary mb-6 leading-relaxed">
+            Access publication indexes, verified citations, institutional collaborations, and open-source project repositories across research portals.
+          </p>
+          <div class="flex items-center flex-wrap gap-3">
+            <a href="https://scholar.google.com/citations?user=_nnPkNIAAAAJ&hl=id" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-full border border-slate-200 bg-slate-50 text-xs font-semibold text-slate-700 hover:border-primary hover:bg-sky-50 hover:text-primary transition duration-300 hover:-translate-y-0.5 shadow-xs">
+              🎓 Google Scholar
+            </a>
+            <a href="https://hopekit-wahyudin.netlify.app" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-full border border-slate-200 bg-slate-50 text-xs font-semibold text-slate-700 hover:border-primary hover:bg-sky-50 hover:text-primary transition duration-300 hover:-translate-y-0.5 shadow-xs">
+              ⚡ HopeKit Platform
+            </a>
+            <a href="mailto:majnunahmadi@gmail.com" class="px-4 py-2.5 rounded-full border border-slate-200 bg-slate-50 text-xs font-semibold text-slate-700 hover:border-primary hover:bg-sky-50 hover:text-primary transition duration-300 hover:-translate-y-0.5 shadow-xs">
+              ✉️ Official Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Institutions Section -->
+  <section id="institutions" class="pt-24 pb-20 bg-slate-900 text-white">
+    <div class="container mx-auto max-w-6xl px-6">
+      <div class="w-full px-4 text-center mb-12">
+        <h4 class="font-bold uppercase text-primary text-sm mb-1 font-mono tracking-wider">Institutional Ties</h4>
+        <h2 class="font-black text-2xl lg:text-3xl text-white mb-2">Universities & Affiliations</h2>
+        <p class="text-slate-400 text-xs md:text-sm max-w-md mx-auto">Almamater, academic faculties, and institutional partners.</p>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-6 md:gap-8 text-center">
+        <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700/60 w-60 hover:border-primary hover:bg-slate-800 transition duration-300 hover:-translate-y-1 shadow-lg">
+          <p class="text-xs font-mono text-primary font-bold">ALMAMATER (S1 & S2)</p>
+          <p class="font-bold text-sm text-slate-100 mt-2">Universitas Padjadjaran</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700/60 w-60 hover:border-emerald-400 hover:bg-slate-800 transition duration-300 hover:-translate-y-1 shadow-lg">
+          <p class="text-xs font-mono text-emerald-400 font-bold">FACULTY APPOINTMENT</p>
+          <p class="font-bold text-sm text-slate-100 mt-2">Universitas Panca Sakti Bekasi</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700/60 w-60 hover:border-amber-400 hover:bg-slate-800 transition duration-300 hover:-translate-y-1 shadow-lg">
+          <p class="text-xs font-mono text-amber-400 font-bold">DOCTORAL PROGRAM</p>
+          <p class="font-bold text-sm text-slate-100 mt-2">Universitas Negeri Jakarta</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications Section -->
+  <section id="publications" class="pt-24 pb-20 bg-slate-100">
+    <div class="container mx-auto max-w-6xl px-6">
+      <div class="w-full px-4 text-center mb-12">
+        <h4 class="font-bold uppercase text-primary text-sm mb-1 font-mono tracking-wider">Curated Scholarship</h4>
+        <h2 class="font-black text-2xl lg:text-3xl text-dark mb-2">Selected Publications</h2>
+        <p class="text-secondary text-xs md:text-sm max-w-lg mx-auto">Peer-reviewed monographs, sociolinguistic studies, and computational models.</p>
+      </div>
+
+      <!-- Publication Cards Grid (Dinamis dari publications-data.js) -->
+      <div id="publications-container" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+
+      <div class="mt-12 text-center">
+        <a href="https://scholar.google.com/citations?user=_nnPkNIAAAAJ&hl=id" target="_blank" rel="noopener noreferrer" class="inline-block py-3.5 px-8 rounded-full bg-dark text-white text-xs font-bold hover:bg-slate-800 transition duration-300 shadow-md hover:-translate-y-0.5">
+          Access Complete 21 Publications on Google Scholar &nearr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section (HopeKit) -->
+  <section id="projects" class="pt-24 pb-20 bg-white">
+    <div class="container mx-auto max-w-6xl px-6">
+      <div class="w-full px-4 text-center mb-12">
+        <h4 class="font-bold uppercase text-primary text-sm mb-1 font-mono tracking-wider">Software Output</h4>
+        <h2 class="font-black text-2xl lg:text-3xl text-dark mb-2">HopeKit Platform</h2>
+        <p class="text-secondary text-xs md:text-sm max-w-lg mx-auto">Specialized computational workbench for semantic research and text corpus extraction.</p>
+      </div>
+
+      <div class="max-w-2xl mx-auto p-8 rounded-3xl bg-gradient-to-br from-slate-900 to-slate-950 text-white shadow-xl hover:shadow-2xl transition duration-300 hover:-translate-y-1 border border-slate-800">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-2xl font-black text-white tracking-tight">HopeKit</h3>
+          <span class="text-[11px] font-mono uppercase px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-bold">Active Deployment</span>
+        </div>
+        <p class="text-xs font-mono text-primary font-semibold mb-2">Lead Creator & Applied Researcher</p>
+        <p class="text-xs text-slate-300 leading-relaxed mb-6">
+          A web-based computational environment designed for automated text annotation, formal semantic structures, and legal discourse analysis.
+        </p>
+        <a href="https://hopekit-wahyudin.netlify.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary hover:bg-sky-600 text-white font-bold text-xs transition duration-300 shadow-sm hover:shadow-md">
+          Launch HopeKit Platform &nearr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="pt-24 pb-20 bg-slate-100">
+    <div class="container mx-auto max-w-6xl px-6">
+      <div class="w-full px-4 text-center mb-12">
+        <h4 class="font-bold uppercase text-primary text-sm mb-1 font-mono tracking-wider">Contact</h4>
+        <h2 class="font-black text-2xl lg:text-3xl text-dark mb-2">Get In Touch</h2>
+        <p class="text-secondary text-xs md:text-sm max-w-md mx-auto">Reach out for academic collaborations, lecture invitations, or research inquiries.</p>
+      </div>
+
+      <form class="max-w-xl mx-auto bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
+        <div class="w-full mb-6">
+          <label for="name" class="text-xs font-bold text-primary uppercase block mb-2 font-mono">Full Name</label>
+          <input type="text" id="name" class="w-full bg-slate-50 text-dark p-3.5 rounded-xl border border-slate-200 focus:outline-hidden focus:border-primary focus:ring-1 focus:ring-primary text-sm transition" placeholder="Your name" />
+        </div>
+        <div class="w-full mb-6">
+          <label for="email" class="text-xs font-bold text-primary uppercase block mb-2 font-mono">Email Address</label>
+          <input type="email" id="email" class="w-full bg-slate-50 text-dark p-3.5 rounded-xl border border-slate-200 focus:outline-hidden focus:border-primary focus:ring-1 focus:ring-primary text-sm transition" placeholder="majnunahmadi@gmail.com" />
+        </div>
+        <div class="w-full mb-6">
+          <label for="message" class="text-xs font-bold text-primary uppercase block mb-2 font-mono">Message</label>
+          <textarea id="message" rows="4" class="w-full bg-slate-50 text-dark p-3.5 rounded-xl border border-slate-200 focus:outline-hidden focus:border-primary focus:ring-1 focus:ring-primary text-sm transition" placeholder="Write your message..."></textarea>
+        </div>
+        <button type="button" class="text-sm font-semibold text-white bg-primary py-3.5 px-8 rounded-full w-full hover:bg-sky-600 hover:shadow-lg hover:shadow-sky-500/20 hover:-translate-y-0.5 transition duration-300">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-dark pt-16 pb-12 text-white">
+    <div class="container mx-auto max-w-6xl px-6">
+      <div class="flex flex-wrap">
+        <div class="w-full px-4 mb-10 md:w-1/2">
+          <h2 class="font-black text-2xl text-white mb-2 tracking-tight">Wahyudin Ahmadi</h2>
+          <h3 class="font-medium text-slate-400 text-sm mb-4">Universitas Panca Sakti Bekasi</h3>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+            Kampus A Jl. Raya Hankam No. 54, Kota Bekasi, West Java, Indonesia.<br />
+            Kampus B Jl. Tegal Danas, Cikarang Pusat,Kabupaten Bekasi, West Java, Indonesia.<br />
+
+            - Specializing in Applied Linguistics and Computational Modeling.-
+          </p>
+        </div>
+        <div class="w-full px-4 mb-10 md:w-1/2">
+          <h3 class="font-bold text-white text-base mb-4">Quick Navigation</h3>
+          <ul class="text-xs text-slate-400 space-y-2">
+            <li><a href="#home" class="hover:text-primary transition duration-200">Home</a></li>
+            <li><a href="#about" class="hover:text-primary transition duration-200">Academic Profile</a></li>
+            <li><a href="#publications" class="hover:text-primary transition duration-200">Publications</a></li>
+            <li><a href="#projects" class="hover:text-primary transition duration-200">HopeKit Platform</a></li>
+            <li><a href="./myblog.html" class="hover:text-primary transition duration-200">Essays & Perspectives</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="w-full pt-8 border-t border-slate-800 text-center">
+        <p class="font-medium text-xs text-slate-500">
+          &copy; 2026 Wahyudin Ahmadi. Built with Tailwind CSS.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Navbar & Hamburger Interaktif -->
+  <script>
+    window.onscroll = function () {
+      const header = document.querySelector('header');
+      const fixedNav = header.offsetTop;
+
+      if (window.pageYOffset > fixedNav) {
+        header.classList.add('navbar-fixed');
+      } else {
+        header.classList.remove('navbar-fixed');
+      }
+    };
+
+    const hamburger = document.querySelector('#hamburger');
+    const navMenu = document.querySelector('#nav-menu');
+
+    hamburger.addEventListener('click', function () {
+      hamburger.classList.toggle('hamburger-active');
+      navMenu.classList.toggle('hidden');
+    });
+
+    window.addEventListener('click', function (e) {
+      if (e.target != hamburger && e.target != navMenu) {
+        hamburger.classList.remove('hamburger-active');
+        navMenu.classList.add('hidden');
+      }
+    });
+  </script>
+
+  <!-- Script Publikasi Dinamis & Efek Card Lift -->
+  <script src="./publications-data.js"></script>
+  <script>
+    const pubContainer = document.getElementById('publications-container');
+    if (pubContainer && typeof publicationsData !== 'undefined') {
+      pubContainer.innerHTML = publicationsData.map(pub => `
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl hover:border-sky-400 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-sky-50 text-primary font-bold">${pub.tag}</span>
+              <div class="flex items-center gap-2 text-xs font-mono text-slate-400">
+                ${pub.citations ? `<span class="text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">★ Cited by ${pub.citations}</span>` : ''}
+                <span>${pub.year}</span>
+              </div>
+            </div>
+            <h3 class="font-bold text-dark text-base mb-2">${pub.title}</h3>
+            <p class="text-xs text-secondary leading-relaxed mb-4">${pub.desc}</p>
+          </div>
+          <a href="${pub.link}" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-primary hover:text-sky-700 transition flex items-center gap-1 mt-auto">
+            Link for Download  &rarr;
+          </a>
+        </div>
+      `).join('');
+    }
+  </script>
+
+  <!-- Script Scroll Reveal Transition (Muncul Lembut saat Digulir) -->
+  <script>
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('opacity-0', 'translate-y-8');
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('section').forEach(section => {
+      section.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-8');
+      revealObserver.observe(section);
+    });
+  </script>
+</body>
+</html>
