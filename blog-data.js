@@ -82,7 +82,7 @@ const blogArticles = [
       
       <h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">Ekstraksi Fitur N-Gram</h3>
       <p class="text-base leading-relaxed text-slate-700">
-        Dengan mengekstraksi unigram, bigram, dan trigram dari naskah pidato, pola pengulangan gagasan tertentu—seperti nasionalisme, ketahanan ekonomi, atau persatuan—dapat dipetakan probabilitas kemunculannya secara matematis.
+        Dengan mengekstraksi unigram, bigram, dan trigram dari naskah pidato, pola pengulangan gagasan tertentu—seperti nasionalisme, ketahanan ekonomi, atau persatuan—dapat dipetakan probabilitas kemunculannya secara matematis dan dapat digunakan untuk analisis sentimen.
       </p>
     `
   }
