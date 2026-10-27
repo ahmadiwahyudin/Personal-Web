@@ -88,7 +88,7 @@ const blogArticles = [
   },
   {
     id: "literature-of-linguistics-new-boy",
-    title: "Elemen Bernalar dan Distorsi Informasi dalam Film Pendek New Boy",
+    title: "Elemen Bernalar dan Distorsi Informasi",
     category: "Literature",
     date: "Oktober 2026",
     readTime: "10 min read",
