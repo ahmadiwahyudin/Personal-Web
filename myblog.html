@@ -21,10 +21,13 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <style>body { font-family: 'Inter', sans-serif; }</style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+  </style>
 </head>
-<body class="bg-slate-50 text-slate-800">
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-sky-500 selection:text-white">
 
   <!-- Navigasi -->
   <nav class="sticky top-0 z-40 backdrop-blur-md bg-white/85 border-b border-slate-200">
@@ -32,7 +35,7 @@
       <a href="./index.html" class="font-bold text-sm text-dark flex items-center gap-2 hover:text-primary transition">
         &larr; Back to Portfolio
       </a>
-      <span class="text-xs font-mono text-secondary">Ahmadi.lab</span>
+      <span class="text-xs font-mono font-bold text-slate-700">Ahmadi<span class="text-primary">.lab</span></span>
     </div>
   </nav>
 
@@ -91,7 +94,7 @@
     const closeBottomBtn = document.getElementById('close-modal-bottom');
 
     // 1. Render Kartu Artikel di Daftar
-    if (typeof blogArticles !== 'undefined') {
+    if (typeof blogArticles !== 'undefined' && container) {
       container.innerHTML = blogArticles.map(article => `
         <article class="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-primary transition duration-200">
           <div class="flex items-center gap-3 text-xs font-mono text-secondary mb-2">
@@ -111,7 +114,7 @@
       `).join('');
     }
 
-    // 2. Fungsi Membuka Modal Baca
+    // 2. Fungsi Membuka Modal Baca (Sintaks string sudah diperbaiki)
     window.openArticle = function(id) {
       const article = blogArticles.find(a => a.id === id);
       if (article) {
@@ -119,20 +122,20 @@
         modalMeta.innerText = `${article.category} • ${article.date} • ${article.readTime}`;
         modalContent.innerHTML = article.content;
         modal.classList.remove('hidden');
-        document.body.style.overflow = 'hidden'; // Kunci scroll latar belakang
+        document.body.style.overflow = 'hidden';
       }
     };
 
     // 3. Fungsi Menutup Modal
     function closeModal() {
       modal.classList.add('hidden');
-      document.body.style.overflow = 'auto'; // Kembalikan scroll latar
+      document.body.style.overflow = 'auto';
     }
 
     closeBtn.addEventListener('click', closeModal);
     closeBottomBtn.addEventListener('click', closeModal);
 
-    // Tutup jika klik area luar modal atau tekan Esc
+    // Tutup jika klik latar belakang gelap atau tombol Escape
     modal.addEventListener('click', (e) => {
       if (e.target === modal) closeModal();
     });
