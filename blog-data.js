@@ -129,6 +129,3 @@ const blogArticles = [
     `
   }
 ];
-// Tambahkan di baris paling bawah blog-data.js:
-const blogData = blogArticles;
-const articles = blogArticles;
